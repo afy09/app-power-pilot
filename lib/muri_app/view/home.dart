@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Halo, Pengguna!",
+          "Halo, Ali!",
           style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w600,
@@ -49,18 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             icon: const Icon(Icons.card_giftcard),
           ),
-          InkWell(
-            onTap: () {
-              print('Image clicked');
+          IconButton(
+            onPressed: () {
+              context.push('/login');
             },
-            child: ClipOval(
-                child: CachedNetworkImage(
-              imageUrl: 'https://placehold.co/600x400.png',
-              width: 30,
-              height: 30,
-              fit: BoxFit.cover,
-              errorWidget: (context, url, error) => const Icon(Icons.person),
-            )),
+            icon: const Icon(Icons.logout),
           ),
           SizedBox(width: 14),
         ],
@@ -200,8 +193,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   Text("Generator 1",
                                       style: TextStyle(
                                           fontSize: 16, color: Colors.white)),
-
                                 ],
+
                               )
                             ],
                           ),
@@ -246,6 +239,264 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 20,
               ),
+
+              InkWell(
+                onTap: () {
+                  context.push('/login');
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.blue, // Warna border
+                      width: 1.5,          // Lebar border dalam pixel
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    color: Color(0xFFFFFFFF),
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Colors.black.withOpacity(0.25),
+                    //     spreadRadius: 0,
+                    //     blurRadius: 4,
+                    //     offset: const Offset(0, 4),
+                    //   ),
+                    //
+                    // ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.leaderboard,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
+
+                      const SizedBox(
+                        width: 20,
+                      ),
+
+                      Text(
+                        'Power Now  :',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Text(
+                        '  3.074 Kwh',
+                        style: TextStyle(
+                            fontSize: 15,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  color: Color(0xFF1594D7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.25),
+                      spreadRadius: 0,
+                      blurRadius: 4,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 24.0, vertical: 24.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.max,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Pemakaian Listrik",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white),
+                                ),
+
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+
+                      const SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.leaderboard,
+                                color: Colors.red,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text("Today",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
+                                  Text(
+                                    "0 kwh",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+
+
+                          Container(
+                            height: 35,
+                            child: VerticalDivider(
+                              color: Colors.white,
+                              thickness: 1,
+                            ),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.leaderboard,
+                                color: Colors.yellow,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text("Weekly",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
+                                  Text(
+                                    "11 kwh",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.leaderboard,
+                                color: Colors.green,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text("Mounthly",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
+                                  Text(
+                                    "822.0 kwh",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+
+
+                          Container(
+                            height: 35,
+                            child: VerticalDivider(
+                              color: Colors.white,
+                              thickness: 1,
+                            ),
+                          ),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.leaderboard,
+                                color: Colors.white,
+                                size: 30,
+                              ),
+                              SizedBox(
+                                width: 10,
+                              ),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Text("Yearly",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
+                                  Text(
+                                    "999.0 kwh",
+                                    style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.white),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+
+                        ],
+                      )
+
+                    ],
+                  ),
+                ),
+              ),
+
+              const SizedBox(
+                height: 20,
+              ),
               const Text(
                 "Generator",
                 style: TextStyle(
@@ -258,43 +509,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Row(
                 children: [
-                  Expanded(
-                    flex: 1,
-                    child: InkWell(
-                      onTap: () {
-                        context.push('/quiz-category');
-                      },
-                      child: Container(
-                        height: 210,
-                        decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image: AssetImage(""),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.25),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: Stack(children: [
-                          Positioned(
-                              top: 20,
-                              left: 12,
-                              child: Text(
-                                "Generator",
-                                style: TextStyle(
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white),
-                              )),
-                        ]),
-                      ),
-                    ),
-                  ),
+
                   Expanded(
                     flex: 1,
                     child: InkWell(
@@ -322,7 +537,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               top: 20,
                               left: 12,
                               child: Text(
-                                "Pemakaian \nKeseluruhan",
+                                "Riwayat \nPemakaian",
                                 style: TextStyle(
                                     fontSize: 24,
                                     fontWeight: FontWeight.w600,

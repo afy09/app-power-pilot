@@ -8,6 +8,30 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Halo, Ali!",
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: Color(0xFF4F4A45)),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              context.push('/reward');
+            },
+            icon: const Icon(Icons.card_giftcard),
+          ),
+          IconButton(
+            onPressed: () {
+              context.push('/login');
+            },
+            icon: const Icon(Icons.logout),
+          ),
+          SizedBox(width: 14),
+        ],
+      ),
       backgroundColor: Color(0xFFFFFFFF),
       body: SafeArea(
         child: Padding(
@@ -26,7 +50,7 @@ class ProfileScreen extends StatelessWidget {
                       context.push('/edit-profile');
                     },
                     icon: Icon(Icons.edit_square),
-                    color: Colors.white,
+                    color: Colors.black,
                   )
                 ],
               ),

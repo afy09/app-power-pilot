@@ -4,7 +4,7 @@ import 'package:museum_polri/muri_app/view/component/category_card.dart';
 
 List<Map<String, String>> categories = [
   {
-    'kategori': 'senjata',
+    'kategori': 'Januari',
     'asset': 'images/senjata-no-bg.png',
     'overview':
         'Senjata adalah alat yang digunakan untuk melawan musuh. Senjata dapat berupa alat tajam, alat tembak, alat peledak, dan lain-lain.',

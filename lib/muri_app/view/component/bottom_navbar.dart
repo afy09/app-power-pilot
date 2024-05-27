@@ -27,7 +27,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           color: Colors.white,
         ),
         Icon(
-          Icons.fit_screen_sharp,
+          Icons.info_outline,
           size: 30,
           color: Colors.white,
         ),
@@ -38,7 +38,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
       ],
       color: const Color(0xFF1594D7),
-      backgroundColor: _selectedIndex == 3 ? Color(0xFF1594D7) : Colors.white,
+      backgroundColor: _selectedIndex == 4 ? Color(0xFF1594D7) : Colors.white,
       buttonBackgroundColor: const Color(0xFF1594D7),
       animationDuration: const Duration(milliseconds: 350),
       onTap: (value) {

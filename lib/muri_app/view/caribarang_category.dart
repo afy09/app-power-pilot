@@ -4,12 +4,12 @@ import 'package:museum_polri/muri_app/view/component/category_card.dart';
 
 List<Map<String, String>> categories = [
   {
-    'kategori': 'senjata',
+    'kategori': 'Januari',
     'asset': 'images/senjata-no-bg.png',
-    'overview':
-        'Senjata adalah alat yang digunakan untuk melawan musuh. Senjata dapat berupa alat tajam, alat tembak, alat peledak, dan lain-lain.',
-    'instruction':
-        'Cari barang yang benar dari pertanyaan yang diberikan. Scan QR untuk menjawab. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'Pemakaian':
+        'Pemakaian bulan ini adalah : 340.2 Kwh',
+    'Total':
+        'Rp. 320.000',
   },
   {
     'kategori': 'Cyber',
@@ -122,7 +122,7 @@ class CariBarangCategoryScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CategoryCard(
-                              name: "Senjata",
+                              name: "Januari",
                               asset: "images/senjata.png",
                               isLeft: true,
                               onClick: () {
@@ -370,22 +370,7 @@ class CariBarangCategoryScreen extends StatelessWidget {
               ),
             ],
           ),
-          ElevatedButton(
-              onPressed: onStart,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color(0xFFED7D31),
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              child: Text(
-                'Start Game',
-                style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white),
-              )),
+
         ],
       ),
     );

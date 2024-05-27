@@ -6,11 +6,30 @@ class ScanScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: ElevatedButton(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Halo, Ali!",
+          style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w600,
+              color: Color(0xFF4F4A45)),
+        ),
+        actions: [
+          IconButton(
             onPressed: () {
-              context.push('/ar-screen');
+              context.push('/reward');
             },
-            child: Text('Play AR')));
+            icon: const Icon(Icons.card_giftcard),
+          ),
+          IconButton(
+            onPressed: () {
+              context.push('/login');
+            },
+            icon: const Icon(Icons.logout),
+          ),
+          SizedBox(width: 14),
+        ],
+      ),);
   }
 }

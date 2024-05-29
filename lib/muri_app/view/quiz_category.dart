@@ -12,20 +12,20 @@ List<Map<String, String>> categories = [
         'Pilihlah jawaban yang benar dari pertanyaan yang diberikan. Jawaban yang benar akan memberikan poin lebih banyak.',
   },
   {
-    'kategori': 'Cyber',
+    'kategori': 'Februari',
     'asset': 'images/cyber-no-bg.png',
     'overview':
-        'Cyber adalah dunia maya yang terhubung dengan internet. Cyber dapat berupa website, aplikasi, dan lain-lain.',
+        'Pemakaian bulan ini adalah : 340.2 Kwh',
     'instruction':
-        'Pilihlah jawaban yang benar dari pertanyaan yang diberikan. Jawaban yang benar akan memberikan poin lebih banyak.',
+        '340.000',
   },
   {
-    'kategori': 'Teroris',
-    'asset': 'images/teroris-no-bg.png',
+    'kategori': 'Februari',
+    'asset': 'images/cyber-no-bg.png',
     'overview':
-        'Teroris adalah orang yang melakukan tindakan kekerasan untuk mencapai tujuan tertentu. Teroris dapat berupa kelompok atau individu.',
+    'Pemakaian bulan ini adalah : 340.2 Kwh',
     'instruction':
-        'Pilihlah jawaban yang benar dari pertanyaan yang diberikan. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'Rp. 350.000',
   },
   {
     'kategori': 'Sejarah',
@@ -82,7 +82,7 @@ class QuizCategoryScreen extends StatelessWidget {
               child: AppBar(
                 automaticallyImplyLeading: true,
                 title: const Text(
-                  "Quiz",
+                  "Riwayat Pemakaian",
                   style: TextStyle(
                       color: Color(0xFF34312F),
                       fontWeight: FontWeight.w600,
@@ -98,17 +98,17 @@ class QuizCategoryScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // const Text(
+                  //   "Silahkan",
+                  //   style: TextStyle(
+                  //       fontSize: 32,
+                  //       fontWeight: FontWeight.w600,
+                  //       color: Color(0xFF34312F)),
+                  // ),
                   const Text(
-                    "Silahkan",
+                    "Tahun 2024",
                     style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF34312F)),
-                  ),
-                  const Text(
-                    "Pilih Kategori",
-                    style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                         color: Color(0xFF34312F)),
                   ),
@@ -122,7 +122,7 @@ class QuizCategoryScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CategoryCard(
-                              name: "Senjata",
+                              name: "Januari",
                               asset: "images/senjata.png",
                               isLeft: true,
                               onClick: () {
@@ -139,7 +139,7 @@ class QuizCategoryScreen extends StatelessWidget {
                                     });
                               }),
                           CategoryCard(
-                              name: "Cyber",
+                              name: "Februari",
                               asset: "images/cyber.png",
                               isLeft: false,
                               onClick: () {
@@ -150,7 +150,9 @@ class QuizCategoryScreen extends StatelessWidget {
                                       return _bottomSheet(
                                           context: context,
                                           categories: categories[1],
-                                          onStart: () {});
+                                          onStart: () {
+                                            context.push('/quiz');
+                                          });
                                     });
                               }),
                         ],

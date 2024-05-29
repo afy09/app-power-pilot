@@ -11,18 +11,18 @@ class RewardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Tukar Point'),
+          title: Text('Tambah Saldo'),
         ),
         body: Column(
           children: [
             Container(
               width: double.infinity,
-              height: 250,
+              height: 200,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(10),
                       bottomRight: Radius.circular(10)),
-                  color: Color(0xFFD08413)),
+                  color: Color(0xFF1594D7)),
               child: Align(
                 alignment: Alignment.center,
                 child: Row(
@@ -30,7 +30,7 @@ class RewardScreen extends StatelessWidget {
                   children: [
                     Icon(
                       Icons.monetization_on,
-                      color: Colors.yellow,
+                      color: Colors.white,
                       size: 80,
                     ),
                     SizedBox(
@@ -40,17 +40,18 @@ class RewardScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          // Text(
+                          //     'Saldo Saat ini',
+                          //     style: TextStyle(fontSize: 15, color: Colors.white),
+                          //   ),
                           Text(
-                            '1456 Pts',
+                            'Rp, 270.000',
                             style: TextStyle(
                                 fontSize: 32,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white),
                           ),
-                          Text(
-                            'My reward points',
-                            style: TextStyle(fontSize: 12, color: Colors.white),
-                          )
+                          //
                         ]),
                   ],
                 ),
@@ -62,7 +63,7 @@ class RewardScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Doorprize',
+                    'Metode Pembayaran',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   TextButton(
@@ -72,7 +73,7 @@ class RewardScreen extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,
-                          color: Color(0xFFDB7B1A)),
+                          color: Color(0xFF1594D7)),
                     ),
                   ),
                 ],
@@ -88,36 +89,54 @@ class RewardScreen extends StatelessWidget {
                   children: [
                     _buildRewardCard(
                         onTap: () {
-                          context.push('/reward-detail');
+                          context.push('/order');
                         },
+
                         imageUrl:
-                            'https://media.wired.com/photos/6332360740fe1e8870aa3bc0/master/pass/iPhone-14-Review-Gear.jpg',
-                        title: 'iPhone 14',
+                            'https://i.pinimg.com/564x/d4/b9/f5/d4b9f5e496dafa4fe2138980446f3dd1.jpg',
+                        title: 'BRI',
                         point: 2345),
                     _buildRewardCard(
                         onTap: () {
-                          context.push('/reward-detail');
+                          context.push('/order');
                         },
                         imageUrl:
-                            'https://images.samsung.com/in/smartphones/galaxy-z-flip4/buy/Flip4_Carousel_ProductKV_PinkGold_MO.jpg',
-                        title: 'Samsung Z Flip',
+                            'https://brandslogos.com/wp-content/uploads/images/large/bank-mandiri-logo.png',
+                        title: 'Mandiri',
                         point: 2345),
                     _buildRewardCard(
                         onTap: () {
-                          context.push('/reward-detail');
+                          context.push('/order');
                         },
                         imageUrl:
-                            'https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/118/MTA-143787898/brd-44261_xiaomi-smart-tv-a-43-inchi-fhd-google-tv-new_full02-39d894df.jpg',
-                        title: 'Smart TV',
+                            'https://baradesain.wordpress.com/wp-content/uploads/2010/10/bca-bank-logo_logo-bagus-03.jpg?w=810',
+                        title: 'BCA',
                         point: 2345),
                     _buildRewardCard(
                         onTap: () {
-                          context.push('/reward-detail');
+                          context.push('/order');
                         },
                         imageUrl:
-                            'https://images.philips.com/is/image/philipsconsumer/327799c16ab44a988316b0bf007b71d9?\$jpglarge\$&wid=420&hei=360',
-                        title: 'Radio',
+                            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDKaJB1e10Qh1XS6RVFA5EaQXaoBMLb0S3l1ytS6QFw9WBYYJBwcijkvQtuOC4XdMjfiY&usqp=CAU',
+                        title: 'CIMB Niaga',
                         point: 2345),
+                    _buildRewardCard(
+                        onTap: () {
+                          context.push('/order');
+                        },
+                        imageUrl:
+                        'https://p16-capcut-sign-va.ibyteimg.com/tos-alisg-v-643f9f/oMBEWABt4DNfpAtQB3uHIcTiAB0iEXy2AIwBKT~tplv-nhvfeczskr-1:250:0.webp?lk3s=44acef4b&x-expires=1740347514&x-signature=LBHZqIoCLWNvKVHmoymClndj8Po%3D',
+                        title: 'Alfamart',
+                        point: 2345),
+                    _buildRewardCard(
+                        onTap: () {
+                          context.push('/order');
+                        },
+                        imageUrl:
+                        'https://cdn.kibrispdr.org/data/752/logo-indomaret-hd-12.jpg',
+                        title: 'Indomart',
+                        point: 2345),
+
                   ],
                 ),
               ),
@@ -176,13 +195,13 @@ class RewardScreen extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              Text(
-                                '$point Pts',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 10,
-                                ),
-                              ),
+                              // Text(
+                              //   '$point Pts',
+                              //   style: TextStyle(
+                              //     color: Colors.white,
+                              //     fontSize: 10,
+                              //   ),
+                              // ),
                             ],
                           ),
                         ),

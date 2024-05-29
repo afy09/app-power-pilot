@@ -43,11 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Color(0xFF4F4A45)),
         ),
         actions: [
+
           IconButton(
             onPressed: () {
-              context.push('/reward');
+              context.push('/caribarang_category');
             },
-            icon: const Icon(Icons.card_giftcard),
+            icon: const Icon(Icons.history),
           ),
           IconButton(
             onPressed: () {
@@ -55,6 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             icon: const Icon(Icons.logout),
           ),
+
           SizedBox(width: 14),
         ],
       ),
@@ -66,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               InkWell(
                 onTap: () {
-                  context.push('/login');
+                  context.push('/reward');
                 },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -494,61 +496,57 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
 
-              const SizedBox(
-                height: 20,
-              ),
-              const Text(
-                "Generator",
-                style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w600,
-                    color: Color(0xFF34312F)),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
 
-                  Expanded(
-                    flex: 1,
-                    child: InkWell(
-                      onTap: () {
-                        context.push('/caribarang-category');
-                      },
-                      child: Container(
-                        height: 210,
-                        decoration: BoxDecoration(
-                          image: const DecorationImage(
-                              image: AssetImage("images/cari-barang.png"),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(20),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.25),
-                              spreadRadius: 0,
-                              blurRadius: 4,
-                              offset: const Offset(0, 4),
-                            ),
-                          ],
-                        ),
-                        child: Stack(children: [
-                          Positioned(
-                              top: 20,
-                              left: 12,
-                              child: Text(
-                                "Riwayat \nPemakaian",
-                                style: TextStyle(
-                                    fontSize: 24,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white),
-                              )),
-                        ]),
-                      ),
-                    ),
-                  ),
-                ],
-              )
+              // const Text(
+              //   "Generator",
+              //   style: TextStyle(
+              //       fontSize: 24,
+              //       fontWeight: FontWeight.w600,
+              //       color: Color(0xFF34312F)),
+              // ),
+
+              // Row(
+              //   children: [
+              //
+              //     Expanded(
+              //       flex: 1,
+              //       child: InkWell(
+              //         onTap: () {
+              //           context.push('/caribarang_category');
+              //         },
+              //         child: Container(
+              //           height: 210,
+              //           decoration: BoxDecoration(
+              //             image: const DecorationImage(
+              //                 image: AssetImage("images/cari-barang.png"),
+              //                 fit: BoxFit.cover),
+              //             borderRadius: BorderRadius.circular(20),
+              //             boxShadow: [
+              //               BoxShadow(
+              //                 color: Colors.black.withOpacity(0.25),
+              //                 spreadRadius: 0,
+              //                 blurRadius: 4,
+              //                 offset: const Offset(0, 4),
+              //               ),
+              //             ],
+              //           ),
+              //           child: Stack(children: [
+              //             Positioned(
+              //                 top: 20,
+              //                 left: 20,
+              //                 child: Text(
+              //                   "Riwayat \nPemakaian",
+              //                   style: TextStyle(
+              //                       fontSize: 24,
+              //                       fontWeight: FontWeight.w600,
+              //                       color: Colors.white),
+              //                 )),
+              //           ]),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // )
             ],
           ),
         ),

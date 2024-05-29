@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:museum_polri/muri_app/view/component/category_card.dart';
@@ -5,51 +6,51 @@ import 'package:museum_polri/muri_app/view/component/category_card.dart';
 List<Map<String, String>> categories = [
   {
     'kategori': 'Januari',
-    'asset': 'images/senjata-no-bg.png',
+    'asset': 'images/history.png',
     'Pemakaian':
-        'Pemakaian bulan ini adalah : 340.2 Kwh',
+    '340.2 Kwh',
     'Total':
-        'Rp. 320.000',
+    'Rp. 320.000',
   },
   {
-    'kategori': 'Cyber',
-    'asset': 'images/cyber-no-bg.png',
-    'overview':
-        'Cyber adalah dunia maya yang terhubung dengan internet. Cyber dapat berupa website, aplikasi, dan lain-lain.',
-    'instruction':
-        'Cari barang yang benar dari pertanyaan yang diberikan. Scan QR untuk menjawab. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'kategori': 'Februari',
+    'asset': 'images/history.png',
+    'Pemakaian':
+    '340.2 Kwh',
+    'Total':
+    'Rp. 320.000',
   },
   {
-    'kategori': 'Teroris',
-    'asset': 'images/teroris-no-bg.png',
-    'overview':
-        'Teroris adalah orang yang melakukan tindakan kekerasan untuk mencapai tujuan tertentu. Teroris dapat berupa kelompok atau individu.',
-    'instruction':
-        'Cari barang yang benar dari pertanyaan yang diberikan. Scan QR untuk menjawab. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'kategori': 'Maret',
+    'asset': 'images/history.png',
+    'Pemakaian':
+    '340.2 Kwh',
+    'Total':
+    'Rp. 320.000',
   },
   {
-    'kategori': 'Sejarah',
-    'asset': 'images/sejarah-no-bg.png',
-    'overview':
-        'Sejarah adalah catatan masa lalu yang terjadi di dunia. Sejarah dapat berupa peristiwa, tokoh, dan lain-lain.',
-    'instruction':
-        'Cari barang yang benar dari pertanyaan yang diberikan. Scan QR untuk menjawab. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'kategori': 'April',
+    'asset': 'images/history.png',
+    'Pemakaian':
+    '340.2 Kwh',
+    'Total':
+    'Rp. 320.000',
   },
   {
-    'kategori': 'Peristiwa',
-    'asset': 'images/peristiwa-no-bg.png',
-    'overview':
-        'Peristiwa adalah kejadian yang terjadi di dunia. Peristiwa dapat berupa bencana alam, perang, dan lain-lain.',
-    'instruction':
-        'Cari barang yang benar dari pertanyaan yang diberikan. Scan QR untuk menjawab. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'kategori': 'Mei',
+    'asset': 'images/history.png',
+    'Pemakaian':
+    '340.2 Kwh',
+    'Total':
+    'Rp. 320.000',
   },
   {
-    'kategori': 'Atribut',
-    'asset': 'images/atribut-no-bg.png',
-    'overview':
-        'Atribut adalah perlengkapan yang digunakan oleh seseorang. Atribut dapat berupa seragam, tanda pengenal, dan lain-lain.',
-    'instruction':
-        'Cari barang yang benar dari pertanyaan yang diberikan. Scan QR untuk menjawab. Jawaban yang benar akan memberikan poin lebih banyak.',
+    'kategori': 'Juni',
+    'asset': 'images/history.png',
+    'Pemakaian':
+    '340.2 Kwh',
+    'Total':
+    'Rp. 320.000',
   },
 ];
 
@@ -82,7 +83,7 @@ class CariBarangCategoryScreen extends StatelessWidget {
               child: AppBar(
                 automaticallyImplyLeading: true,
                 title: const Text(
-                  "Quiz",
+                  "Riwayat Pemakaian",
                   style: TextStyle(
                       color: Color(0xFF34312F),
                       fontWeight: FontWeight.w600,
@@ -98,15 +99,15 @@ class CariBarangCategoryScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // const Text(
+                  //   "Silahkan",
+                  //   style: TextStyle(
+                  //       fontSize: 32,
+                  //       fontWeight: FontWeight.w600,
+                  //       color: Color(0xFF34312F)),
+                  // ),
                   const Text(
-                    "Silahkan",
-                    style: TextStyle(
-                        fontSize: 32,
-                        fontWeight: FontWeight.w600,
-                        color: Color(0xFF34312F)),
-                  ),
-                  const Text(
-                    "Pilih Kategori",
+                    "Tahun 2024",
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
@@ -123,7 +124,7 @@ class CariBarangCategoryScreen extends StatelessWidget {
                         children: [
                           CategoryCard(
                               name: "Januari",
-                              asset: "images/senjata.png",
+                              asset: "images/history-bg.png",
                               isLeft: true,
                               onClick: () {
                                 showModalBottomSheet(
@@ -139,8 +140,8 @@ class CariBarangCategoryScreen extends StatelessWidget {
                                     });
                               }),
                           CategoryCard(
-                              name: "Cyber",
-                              asset: "images/cyber.png",
+                              name: "Februari",
+                              asset: "images/history-bg.png",
                               isLeft: false,
                               onClick: () {
                                 showModalBottomSheet(
@@ -159,8 +160,8 @@ class CariBarangCategoryScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CategoryCard(
-                              name: "Teroris",
-                              asset: "images/teroris.png",
+                              name: "Maret",
+                              asset: "images/history-bg.png",
                               isLeft: true,
                               onClick: () {
                                 showModalBottomSheet(
@@ -174,8 +175,8 @@ class CariBarangCategoryScreen extends StatelessWidget {
                                     });
                               }),
                           CategoryCard(
-                              name: "Sejarah",
-                              asset: "images/sejarah.png",
+                              name: "April",
+                              asset: "images/history-bg.png",
                               isLeft: false,
                               onClick: () {
                                 showModalBottomSheet(
@@ -194,8 +195,8 @@ class CariBarangCategoryScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CategoryCard(
-                              name: "Peristiwa",
-                              asset: "images/peristiwa.png",
+                              name: "Mei",
+                              asset: "images/history-bg.png",
                               isLeft: true,
                               onClick: () {
                                 showModalBottomSheet(
@@ -209,8 +210,8 @@ class CariBarangCategoryScreen extends StatelessWidget {
                                     });
                               }),
                           CategoryCard(
-                              name: "Atribut",
-                              asset: "images/atribut.png",
+                              name: "Juni",
+                              asset: "images/history-bg.png",
                               isLeft: false,
                               onClick: () {
                                 showModalBottomSheet(
@@ -265,9 +266,9 @@ class CariBarangCategoryScreen extends StatelessWidget {
                   )),
             ),
           ),
-          const SizedBox(
-            height: 10,
-          ),
+          // const SizedBox(
+          //   height: 3,
+          // ),
           Padding(
             padding: const EdgeInsets.only(left: 5.0),
             child: Text(
@@ -285,12 +286,12 @@ class CariBarangCategoryScreen extends StatelessWidget {
 
   _bottomSheet(
       {required BuildContext context,
-      required Map<String, String> categories,
-      required void Function() onStart}) {
+        required Map<String, String> categories,
+        required void Function() onStart}) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(top: 10, bottom: 20, left: 15, right: 15),
-      height: MediaQuery.of(context).size.height * 0.8,
+      // padding: const EdgeInsets.only(top: 3, bottom: 5, left: 15, right: 15),
+      height: MediaQuery.of(context).size.height * 0.6,
       decoration: BoxDecoration(
         color: Color(0xFFE0DDDA),
         borderRadius: BorderRadius.only(
@@ -302,7 +303,7 @@ class CariBarangCategoryScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            height: 5,
+            height: 2,
             width: 100,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
@@ -320,55 +321,57 @@ class CariBarangCategoryScreen extends StatelessWidget {
                   color: Color(0xFF8A837E),
                 ),
               ),
-            ],
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+
+              const SizedBox(
+                height: 15,
+              ),
+
               Text(
-                'Overview',
+                'Pemakaian',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 20,
                   fontWeight: FontWeight.w600,
                   color: Color(0xFF34312F),
                 ),
               ),
-              SizedBox(
+              Text(
+                categories['Pemakaian']!,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0xFF716D69),
+                ),
+              ),
+
+              const SizedBox(
                 height: 10,
               ),
+
+
               Text(
-                categories['overview']!,
+                'Total',
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF34312F),
+                ),
+              ),
+              Text(
+                categories['Total']!,
+                style: TextStyle(
+                  fontSize: 15,
                   fontWeight: FontWeight.w500,
                   color: Color(0xFF716D69),
                 ),
               ),
             ],
           ),
+
+
           Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Instruction',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xFF34312F),
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                categories['instruction']!,
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF716D69),
-                ),
-              ),
-            ],
+            crossAxisAlignment: CrossAxisAlignment.center,
+
+
           ),
 
         ],

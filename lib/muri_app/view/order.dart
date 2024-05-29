@@ -12,7 +12,7 @@ class OrderScreen extends StatefulWidget {
 class _OrderScreenState extends State<OrderScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  late Color color1 = Colors.orange;
+  late Color color1 = Colors.blue;
   late Color color2 = Colors.grey;
 
   @override
@@ -24,8 +24,8 @@ class _OrderScreenState extends State<OrderScreen>
 
   void _handleTabSelection() {
     setState(() {
-      color1 = _tabController.index == 0 ? Colors.orange : Colors.grey;
-      color2 = _tabController.index == 1 ? Colors.orange : Colors.grey;
+      color1 = _tabController.index == 0 ? Colors.blue : Colors.grey;
+      color2 = _tabController.index == 1 ? Colors.blue : Colors.grey;
     });
   }
 
@@ -58,7 +58,7 @@ class _OrderScreenState extends State<OrderScreen>
                     ),
                     SizedBox(width: 10),
                     Text(
-                      'Form pemesanan',
+                      'Nominal Saldo',
                       style: TextStyle(
                         color: Colors.black,
                       ),
@@ -83,7 +83,7 @@ class _OrderScreenState extends State<OrderScreen>
                     ),
                     SizedBox(width: 10),
                     Text(
-                      'Form pemesanan',
+                      'Virtual Code',
                       style: TextStyle(color: Colors.black),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -94,7 +94,7 @@ class _OrderScreenState extends State<OrderScreen>
           ),
         ),
         title: const Text(
-          'Selesaikan pemesananmu',
+          'Form isi saldo',
           style: TextStyle(fontSize: 18),
         ),
       ),
@@ -112,7 +112,7 @@ class _OrderScreenState extends State<OrderScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Form pemesanan',
+                      'Form isi saldo',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                     ),
@@ -121,7 +121,7 @@ class _OrderScreenState extends State<OrderScreen>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Nama Lengkap',
+                          'Nominal Saldo',
                           style: TextStyle(
                               fontSize: 14, fontWeight: FontWeight.w500),
                         ),
@@ -138,7 +138,7 @@ class _OrderScreenState extends State<OrderScreen>
                               focusedBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(10),
                                 borderSide: BorderSide(
-                                    color: Colors.orange), // Set the color
+                                    color: Colors.blue), // Set the color
                               ),
                             ),
                           ),
@@ -149,61 +149,61 @@ class _OrderScreenState extends State<OrderScreen>
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'No handphone',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
-                        ),
-                        SizedBox(height: 10),
-                        Container(
-                          height: 50,
-                          child: TextField(
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 15.0, horizontal: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
-                                    color: Colors.orange), // Set the color
-                              ),
-                            ),
-                          ),
-                        ),
+                        // Text(
+                        //   'No handphone',
+                        //   style: TextStyle(
+                        //       fontSize: 14, fontWeight: FontWeight.w500),
+                        // ),
+                        // SizedBox(height: 10),
+                        // Container(
+                        //   height: 50,
+                        //   child: TextField(
+                        //     keyboardType: TextInputType.number,
+                        //     decoration: InputDecoration(
+                        //       contentPadding: EdgeInsets.symmetric(
+                        //           vertical: 15.0, horizontal: 10),
+                        //       border: OutlineInputBorder(
+                        //         borderRadius: BorderRadius.circular(10),
+                        //       ),
+                        //       focusedBorder: OutlineInputBorder(
+                        //         borderRadius: BorderRadius.circular(10),
+                        //         borderSide: BorderSide(
+                        //             color: Colors.blue), // Set the color
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
                       ],
                     ),
-                    SizedBox(height: 15),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Alamat Pengiriman',
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.w500),
-                        ),
-                        SizedBox(height: 10),
-                        Container(
-                          child: TextField(
-                            maxLines: 2,
-                            decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 15.0, horizontal: 10),
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(
-                                    color: Colors.orange), // Set the color
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+                    // SizedBox(height: 15),
+                    // Column(
+                    //   crossAxisAlignment: CrossAxisAlignment.start,
+                    //   children: [
+                    //     Text(
+                    //       'Alamat Pengiriman',
+                    //       style: TextStyle(
+                    //           fontSize: 14, fontWeight: FontWeight.w500),
+                    //     ),
+                    //     SizedBox(height: 10),
+                    //     Container(
+                    //       child: TextField(
+                    //         maxLines: 2,
+                    //         decoration: InputDecoration(
+                    //           contentPadding: EdgeInsets.symmetric(
+                    //               vertical: 15.0, horizontal: 10),
+                    //           border: OutlineInputBorder(
+                    //             borderRadius: BorderRadius.circular(10),
+                    //           ),
+                    //           focusedBorder: OutlineInputBorder(
+                    //             borderRadius: BorderRadius.circular(10),
+                    //             borderSide: BorderSide(
+                    //                 color: Colors.orange), // Set the color
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ],
                 ),
                 Center(
@@ -217,7 +217,7 @@ class _OrderScreenState extends State<OrderScreen>
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: const Color(
-                            0xFFED7D31), // This is the background color
+                            0xFF1594D7), // This is the background color
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
                               10), // This is the border radius

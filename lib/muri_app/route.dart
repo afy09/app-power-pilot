@@ -160,7 +160,7 @@ class AppRouter {
           },
         ),
         GoRoute(
-          path: '/caribarang-category',
+          path: '/caribarang_category',
           parentNavigatorKey: _rootNavigatorKey,
           pageBuilder: (context, state) {
             return MaterialPage(

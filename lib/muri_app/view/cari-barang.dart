@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:qr_code_scanner/qr_code_scanner.dart';
+import 'package:go_router/go_router.dart';
 
 class CariBarangScreen extends StatefulWidget {
   const CariBarangScreen({Key? key}) : super(key: key);

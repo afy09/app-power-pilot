@@ -83,7 +83,7 @@ class _OrderScreenState extends State<OrderScreen>
                     ),
                     SizedBox(width: 10),
                     Text(
-                      'Virtual Code',
+                      'Virtual Account',
                       style: TextStyle(color: Colors.black),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -263,7 +263,7 @@ class _OrderScreenState extends State<OrderScreen>
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20.0),
                       child: Text(
-                        'Kode Kupon',
+                        'Kode Virtual Account',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
@@ -279,12 +279,12 @@ class _OrderScreenState extends State<OrderScreen>
                                 letterSpacing: 5,
                                 fontSize: 36,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xFFED7D31)),
+                                color: Color(0xFF1594D7)),
                           ),
                           IconButton(
                             icon: Icon(
                               Icons.copy,
-                              color: Color(0xFFED7D31),
+                              color: Color(0xFF1594D7),
                             ),
                             onPressed: () {
                               // Copy to clipboard
@@ -331,7 +331,7 @@ class _OrderScreenState extends State<OrderScreen>
                       style: ElevatedButton.styleFrom(
                         foregroundColor: Colors.white,
                         backgroundColor: const Color(
-                            0xFFED7D31), // This is the background color
+                            0xFF1594D7), // This is the background color
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
                               10), // This is the border radius

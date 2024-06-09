@@ -17,12 +17,12 @@ class ProfileScreen extends StatelessWidget {
               color: Color(0xFF4F4A45)),
         ),
         actions: [
-          // IconButton(
-          //   onPressed: () {
-          //     context.push('/reward');
-          //   },
-          //   icon: const Icon(Icons.card_giftcard),
-          // ),
+          IconButton(
+            onPressed: () {
+              context.push('/reward');
+            },
+            icon: const Icon(Icons.card_giftcard),
+          ),
           IconButton(
             onPressed: () {
               context.push('/login');
@@ -84,46 +84,80 @@ class ProfileScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              // Row(
-              //   children: [
-              //     SizedBox(
-              //       width: 10,
-              //     ),
-              //     Expanded(
-              //       child: Container(
-              //         padding: EdgeInsets.all(20),
-              //         decoration: BoxDecoration(
-              //           color: Color(0xFFED7D31),
-              //           borderRadius: BorderRadius.circular(10),
-              //         ),
-              //         child: Row(
-              //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //             children: [
-              //               Image.asset(
-              //                 'images/piala.png',
-              //                 width: 70,
-              //               ),
-              //               Column(
-              //                 children: [
-              //                   Text(
-              //                     "05",
-              //                     style: TextStyle(
-              //                         fontWeight: FontWeight.w700,
-              //                         fontSize: 40,
-              //                         color: Colors.white),
-              //                   ),
-              //                   Text(
-              //                     "Soal",
-              //                     style: TextStyle(
-              //                         fontSize: 14, color: Colors.white),
-              //                   ),
-              //                 ],
-              //               )
-              //             ]),
-              //       ),
-              //     ),
-              //   ],
-              // ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFED7D31),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Image.asset(
+                            'images/piala.png',
+                            width: 70,
+                          ),
+                          Column(
+                            children: [
+                              Text(
+                                "05",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 40,
+                                    color: Colors.white),
+                              ),
+                              Text(
+                                "Soal",
+                                style: TextStyle(
+                                    fontSize: 14, color: Colors.white),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Expanded(
+                    child: Container(
+                      padding: EdgeInsets.all(20),
+                      decoration: BoxDecoration(
+                        color: Color(0xFFED7D31),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Image.asset(
+                              'images/piala.png',
+                              width: 70,
+                            ),
+                            Column(
+                              children: [
+                                Text(
+                                  "05",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 40,
+                                      color: Colors.white),
+                                ),
+                                Text(
+                                  "Soal",
+                                  style: TextStyle(
+                                      fontSize: 14, color: Colors.white),
+                                ),
+                              ],
+                            )
+                          ]),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),

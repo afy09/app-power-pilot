@@ -10,11 +10,11 @@ class EditProfileScreen extends StatefulWidget {
 
 class _EditProfileScreenState extends State<EditProfileScreen> {
   final TextEditingController _namaController =
-      TextEditingController(text: 'MF. Fathin');
+      TextEditingController(text: 'Assyifa Sayyidina Ali');
   final TextEditingController _emailController =
-      TextEditingController(text: 'fathin@gmail.com');
+      TextEditingController(text: 'assyifasayyidinaali@gmail.com');
   final TextEditingController _telpController =
-      TextEditingController(text: '0812313143');
+      TextEditingController(text: '089531174163');
 
   @override
   Widget build(BuildContext context) {

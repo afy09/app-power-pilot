@@ -19,12 +19,6 @@ class ProfileScreen extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              context.push('/reward');
-            },
-            icon: const Icon(Icons.card_giftcard),
-          ),
-          IconButton(
-            onPressed: () {
               context.push('/login');
             },
             icon: const Icon(Icons.logout),
@@ -57,11 +51,9 @@ class ProfileScreen extends StatelessWidget {
               SizedBox(
                 height: 30,
               ),
-              CircleAvatar(
-                radius: 100,
-                backgroundImage: CachedNetworkImageProvider(
-                  "https://placehold.co/600x400.png",
-                ),
+              Image.asset(
+                'images/icon.png',
+                width: 70,
               ),
               SizedBox(
                 height: 20,
@@ -73,9 +65,9 @@ class ProfileScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 24, color: Colors.black),
                   ),
                   Text(
-                    "Faiq Fathin!",
+                    "Assyifa Sayyidina Ali!",
                     style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 28,
                         color: Colors.black,
                         fontWeight: FontWeight.w600),
                   ),

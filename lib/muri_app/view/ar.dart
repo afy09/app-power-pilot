@@ -30,12 +30,7 @@ class _ARScreenState extends State<ARScreen> {
               color: Color(0xFF4F4A45)),
         ),
         actions: [
-          // IconButton(
-          //   onPressed: () {
-          //     context.push('/reward');
-          //   },
-          //   icon: const Icon(Icons.card_giftcard),
-          // ),
+
           IconButton(
             onPressed: () {
               context.push('/login');
@@ -46,9 +41,7 @@ class _ARScreenState extends State<ARScreen> {
         ],
       ),
       body: SafeArea(
-
         child: Center(
-
           // Add this
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -85,7 +78,6 @@ class _ARScreenState extends State<ARScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-
                 ],
               )
             ],
@@ -93,6 +85,5 @@ class _ARScreenState extends State<ARScreen> {
         ),
       ),
     );
-
   }
 }

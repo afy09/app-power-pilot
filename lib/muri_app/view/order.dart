@@ -83,7 +83,7 @@ class _OrderScreenState extends State<OrderScreen>
                     ),
                     SizedBox(width: 10),
                     Text(
-                      'Virtual Code',
+                      'Virtual Account',
                       style: TextStyle(color: Colors.black),
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -263,7 +263,11 @@ class _OrderScreenState extends State<OrderScreen>
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20.0),
                       child: Text(
+
                         'No Virtual Account',
+
+
+
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
@@ -327,29 +331,31 @@ class _OrderScreenState extends State<OrderScreen>
                     ),
                   ],
                 ),
-                // Center(
-                //   child: SizedBox(
-                //     width: 300,
-                //     height: 40,
-                //     child: ElevatedButton(
-                //       onPressed: () {},
-                //       style: ElevatedButton.styleFrom(
-                //         foregroundColor: Colors.white,
-                //         backgroundColor: const Color(
-                //             0xFF1594D7), // This is the background color
-                //         shape: RoundedRectangleBorder(
-                //           borderRadius: BorderRadius.circular(
-                //               10), // This is the border radius
-                //         ),
-                //       ),
-                //       child: const Text(
-                //         'Konfirmasi',
-                //         style: TextStyle(
-                //             fontSize: 22, fontWeight: FontWeight.bold),
-                //       ),
-                //     ),
-                //   ),
-                // )
+
+                Center(
+                  child: SizedBox(
+                    width: 300,
+                    height: 40,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      style: ElevatedButton.styleFrom(
+                        foregroundColor: Colors.white,
+                        backgroundColor: const Color(
+                            0xFF1594D7), // This is the background color
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(
+                              10), // This is the border radius
+                        ),
+                      ),
+                      child: const Text(
+                        'Konfirmasi',
+                        style: TextStyle(
+                            fontSize: 22, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                )
+
               ],
             ),
           )

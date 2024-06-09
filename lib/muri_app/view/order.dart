@@ -263,7 +263,7 @@ class _OrderScreenState extends State<OrderScreen>
                     Padding(
                       padding: const EdgeInsets.only(bottom: 20.0),
                       child: Text(
-                        'Kode Kupon',
+                        'No Virtual Account',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
@@ -279,12 +279,12 @@ class _OrderScreenState extends State<OrderScreen>
                                 letterSpacing: 5,
                                 fontSize: 36,
                                 fontWeight: FontWeight.w600,
-                                color: Color(0xFFED7D31)),
+                                color: Color(0xFF1594D7)),
                           ),
                           IconButton(
                             icon: Icon(
                               Icons.copy,
-                              color: Color(0xFFED7D31),
+                              color: Color(0xFF1594D7),
                             ),
                             onPressed: () {
                               // Copy to clipboard
@@ -292,7 +292,7 @@ class _OrderScreenState extends State<OrderScreen>
                               // Show snackbar
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
-                                  content: Text('Kode kupon disalin'),
+                                  content: Text('Kode disalin'),
                                 ),
                               );
                             },
@@ -306,7 +306,7 @@ class _OrderScreenState extends State<OrderScreen>
                       child: Row(
                         children: [
                           Text(
-                            'Syarat & Ketentuan',
+                            'Cara Pembayaran',
                             style: TextStyle(
                                 fontSize: 14, fontWeight: FontWeight.w600),
                           ),
@@ -316,35 +316,40 @@ class _OrderScreenState extends State<OrderScreen>
                     Padding(
                       padding: const EdgeInsets.only(left: 10, right: 10),
                       child: UnorderedList([
-                        'Radio internet. Ribuan stasiun radio di ujung jari Anda',
-                        'Musik. Kata terucap. Kegembiraan sesungguhnya. Radio internet ini adalah tiket Anda ke ribuan stasiun global yang menyiarkan berbagai program. Penyetel radio digital memberikan penerimaan sejenih kristal dan Anda dapat mengatur sampai 20 prasetel untuk stasiun internet, DAB, atau FM favorit Anda',
+                        'Login ke akun m-banking anda',
+                        'klik menu "m-transfer"',
+                        'Klik kolom menu "No Virtual Account" dan masukan No Virtul Account yang tercantum di menu "From isi saldo"',
+                        'Cek nomor rekining yang anda masukan atas nama "BUDI (POWER PILOT PAY)"',
+                        'Masukan jumlah saldo yang anda akan isi ulang lalu klik "OK"',
+                        'Masukan pin m-banking anda lalu klil "OK"',
+                        'Pembayaran selesai, simpan bukti pembayaran'
                       ]),
                     ),
                   ],
                 ),
-                Center(
-                  child: SizedBox(
-                    width: 300,
-                    height: 40,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: const Color(
-                            0xFFED7D31), // This is the background color
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              10), // This is the border radius
-                        ),
-                      ),
-                      child: const Text(
-                        'Konfirmasi',
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                )
+                // Center(
+                //   child: SizedBox(
+                //     width: 300,
+                //     height: 40,
+                //     child: ElevatedButton(
+                //       onPressed: () {},
+                //       style: ElevatedButton.styleFrom(
+                //         foregroundColor: Colors.white,
+                //         backgroundColor: const Color(
+                //             0xFF1594D7), // This is the background color
+                //         shape: RoundedRectangleBorder(
+                //           borderRadius: BorderRadius.circular(
+                //               10), // This is the border radius
+                //         ),
+                //       ),
+                //       child: const Text(
+                //         'Konfirmasi',
+                //         style: TextStyle(
+                //             fontSize: 22, fontWeight: FontWeight.bold),
+                //       ),
+                //     ),
+                //   ),
+                // )
               ],
             ),
           )
@@ -365,7 +370,7 @@ class UnorderedList extends StatelessWidget {
       // Add list item
       widgetList.add(UnorderedListItem(text));
       // Add space between items
-      widgetList.add(SizedBox(height: 5.0));
+      widgetList.add(SizedBox(height: 1.0));
     }
 
     return Column(children: widgetList);

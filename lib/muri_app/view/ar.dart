@@ -30,12 +30,12 @@ class _ARScreenState extends State<ARScreen> {
               color: Color(0xFF4F4A45)),
         ),
         actions: [
-          IconButton(
-            onPressed: () {
-              context.push('/reward');
-            },
-            icon: const Icon(Icons.card_giftcard),
-          ),
+          // IconButton(
+          //   onPressed: () {
+          //     context.push('/reward');
+          //   },
+          //   icon: const Icon(Icons.card_giftcard),
+          // ),
           IconButton(
             onPressed: () {
               context.push('/login');

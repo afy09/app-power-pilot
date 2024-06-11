@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LeaderboardScreen extends StatelessWidget {
-  const LeaderboardScreen({super.key});
+class ExportScreen extends StatelessWidget {
+  const ExportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class LeaderboardScreen extends StatelessWidget {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    const Color(0xFFBBD8FF),
+                    const Color(0xFF1594D7),
                     const Color(0xFF1594D7),
                   ],
                   begin: Alignment(0, 2.0),
@@ -54,7 +54,7 @@ class LeaderboardScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       const Text(
-                        "Leaderboard",
+                        "Data Export",
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w500,
@@ -91,7 +91,7 @@ class LeaderboardScreen extends StatelessWidget {
                         Expanded(
                           flex: 5,
                           child: Text(
-                            "Volt+Ampere+Watt",
+                            "Export",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,
@@ -112,9 +112,9 @@ class LeaderboardScreen extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     _listTile(
-                        4, "https://placehold.co/600x400.png", "67+78+90", 1600),
+                        4, "https://placehold.co/600x400.png", "Berhasil", 67000),
                     _listTile(
-                        5, "https://placehold.co/600x400.png", "67+78+90", 1500),
+                        5, "https://placehold.co/600x400.png", "Rp. 89.000", 1500),
                     _listTile(
                         6, "https://placehold.co/600x400.png", "67+78+90", 1400),
                     _listTile(

@@ -61,20 +61,15 @@ class RewardDetailScreen extends StatelessWidget {
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Radio internet',
+                        'Export',
                         style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.w600),
-                      ),
-                      Text(
-                        '2345 point',
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.w400),
                       ),
                       SizedBox(height: 20),
                       Text(
@@ -83,9 +78,9 @@ class RewardDetailScreen extends StatelessWidget {
                             fontSize: 16, fontWeight: FontWeight.w500),
                       ),
                       Text(
-                        'Radio internet. Ribuan stasiun radio di ujung jari Anda Musik. Kata terucap. Kegembiraan sesungguhnya. Radio internet ini adalah tiket Anda ke ribuan stasiun global yang menyiarkan berbagai program. Penyetel radio digital memberikan penerimaan sejenih kristal dan Anda dapat mengatur sampai 20 prasetel untuk stasiun internet, DAB, atau FM favorit Anda',
+                        'Export listrik adalah proses di mana suatu negara atau wilayah menghasilkan listrik dalam jumlah yang cukup untuk memenuhi kebutuhan lokalnya dan memiliki kelebihan pasokan yang dapat diekspor ke negara atau wilayah lain. Ini bisa terjadi ketika suatu negara memiliki infrastruktur listrik yang sangat baik dan produksi energi yang berlimpah, sering kali melalui sumber daya alam seperti tenaga air, tenaga surya, tenaga angin, atau tenaga nuklir.',
                         style: TextStyle(
-                            fontSize: 11, fontWeight: FontWeight.w500),
+                            fontSize: 13, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
@@ -103,7 +98,7 @@ class RewardDetailScreen extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          context.push('/order');
+                          context.push('/export');
                         },
                         child: Text(
                           'Tukar Point',

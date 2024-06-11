@@ -332,29 +332,29 @@ class _OrderScreenState extends State<OrderScreen>
                   ],
                 ),
 
-                Center(
-                  child: SizedBox(
-                    width: 300,
-                    height: 40,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: const Color(
-                            0xFF1594D7), // This is the background color
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                              10), // This is the border radius
-                        ),
-                      ),
-                      child: const Text(
-                        'Konfirmasi',
-                        style: TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                )
+                // Center(
+                //   child: SizedBox(
+                //     width: 300,
+                //     height: 40,
+                //     child: ElevatedButton(
+                //       onPressed: () {},
+                //       style: ElevatedButton.styleFrom(
+                //         foregroundColor: Colors.white,
+                //         backgroundColor: const Color(
+                //             0xFF1594D7), // This is the background color
+                //         shape: RoundedRectangleBorder(
+                //           borderRadius: BorderRadius.circular(
+                //               10), // This is the border radius
+                //         ),
+                //       ),
+                //       child: const Text(
+                //         'Konfirmasi',
+                //         style: TextStyle(
+                //             fontSize: 22, fontWeight: FontWeight.bold),
+                //       ),
+                //     ),
+                //   ),
+                // )
 
               ],
             ),

@@ -255,15 +255,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                     color: Color(0xFFFFFFFF),
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //     color: Colors.black.withOpacity(0.25),
-                    //     spreadRadius: 0,
-                    //     blurRadius: 4,
-                    //     offset: const Offset(0, 4),
-                    //   ),
-                    //
-                    // ],
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -495,7 +486,98 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+              InkWell(
+                onTap: () {
+                  context.push('/export');
+                },
+                child: Container(
+                  width: 170,
+                  padding: EdgeInsets.symmetric(horizontal: 1, vertical: 8),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.blue, // Warna border
+                      width: 1.5,          // Lebar border dalam pixel
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    color: Color(0xFFFFFFFF),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.import_export,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
 
+                      const SizedBox(
+                        width: 20,
+                      ),
+
+                      Text(
+                        'Export',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                onTap: () {
+                  context.push('/reward-detail');
+                },
+                child: Container(
+                  width: 170,
+                  padding: EdgeInsets.symmetric(horizontal: 1, vertical: 8),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.blue, // Warna border
+                      width: 1.5,          // Lebar border dalam pixel
+                    ),
+                    borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    color: Color(0xFFFFFFFF),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.import_export,
+                        color: Colors.blue,
+                        size: 30,
+                      ),
+
+                      const SizedBox(
+                        width: 20,
+                      ),
+
+                      Text(
+                        'Import',
+                        style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+    ],
+        ),
+              const SizedBox(
+                height: 20,
+              ),
 
               // const Text(
               //   "Generator",

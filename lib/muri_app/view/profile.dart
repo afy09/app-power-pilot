@@ -48,107 +48,126 @@ class ProfileScreen extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
-                height: 30,
-              ),
               Image.asset(
                 'images/icon.png',
                 width: 70,
               ),
               SizedBox(
-                height: 20,
+                height: 60,
               ),
-              Column(
-                children: [
-                  Text(
-                    "Selamat Datang",
-                    style: TextStyle(fontSize: 24, color: Colors.black),
-                  ),
-                  Text(
-                    "Assyifa Sayyidina Ali!",
-                    style: TextStyle(
-                        fontSize: 28,
+              InkWell(
+                onTap: () {
+                  context.push('');
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
                         color: Colors.black,
-                        fontWeight: FontWeight.w600),
+                      )
+                    ),
                   ),
-                ],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+
+                      Text(
+                        'Nama :',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Text(
+                        '  Assyifa Sayyidina Ali',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+
+                ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFED7D31),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Image.asset(
-                            'images/piala.png',
-                            width: 70,
-                          ),
-                          Column(
-                            children: [
-                              Text(
-                                "05",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 40,
-                                    color: Colors.white),
-                              ),
-                              Text(
-                                "Soal",
-                                style: TextStyle(
-                                    fontSize: 14, color: Colors.white),
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
+              InkWell(
+                onTap: () {
+                  context.push('');
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                          color: Colors.black,
+                        )
                     ),
                   ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Expanded(
-                    child: Container(
-                      padding: EdgeInsets.all(20),
-                      decoration: BoxDecoration(
-                        color: Color(0xFFED7D31),
-                        borderRadius: BorderRadius.circular(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+
+                      Text(
+                        'E-mail :',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
                       ),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Image.asset(
-                              'images/piala.png',
-                              width: 70,
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  "05",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: 40,
-                                      color: Colors.white),
-                                ),
-                                Text(
-                                  "Soal",
-                                  style: TextStyle(
-                                      fontSize: 14, color: Colors.white),
-                                ),
-                              ],
-                            )
-                          ]),
+                      Text(
+                        '  Assyifali@gmail.com',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              InkWell(
+                onTap: () {
+                  context.push('');
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    border: Border(
+                        bottom: BorderSide(
+                          color: Colors.black,
+                        )
                     ),
                   ),
-                ],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+
+                      Text(
+                        'No-Telp :',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      Text(
+                        '  089531177777',
+                        style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600),
+                      ),
+                    ],
+                  ),
+
+                ),
               ),
             ],
           ),

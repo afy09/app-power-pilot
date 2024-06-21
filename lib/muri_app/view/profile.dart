@@ -56,9 +56,6 @@ class ProfileScreen extends StatelessWidget {
                 height: 60,
               ),
               InkWell(
-                onTap: () {
-                  context.push('');
-                },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
@@ -95,9 +92,6 @@ class ProfileScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
-                onTap: () {
-                  context.push('');
-                },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
@@ -134,9 +128,6 @@ class ProfileScreen extends StatelessWidget {
                 height: 20,
               ),
               InkWell(
-                onTap: () {
-                  context.push('');
-                },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(

@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class ExportScreen extends StatelessWidget {
-  const ExportScreen({super.key});
+class ImportScreen extends StatelessWidget {
+  const ImportScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class ExportScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       const Text(
-                        "Data Export",
+                        "Data Import",
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w500,
@@ -91,7 +91,7 @@ class ExportScreen extends StatelessWidget {
                         Expanded(
                           flex: 5,
                           child: Text(
-                            "Export to",
+                            "Import From",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,

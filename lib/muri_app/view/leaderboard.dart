@@ -40,21 +40,21 @@ class LeaderboardScreen extends StatelessWidget {
                 ),
                 gradient: LinearGradient(
                   colors: [
-                    const Color(0xFFBBD8FF),
+                    const Color(0xFF1594D7),
                     const Color(0xFF1594D7),
                   ],
-                  begin: Alignment(0, 2.0),
+                  begin: Alignment(0.5, 2.0),
                   end: Alignment(0.5, 0.5),
                 ),
               ),
               child: SafeArea(
                 child: Padding(
                   padding: const EdgeInsets.only(
-                      top: 10, left: 8, right: 8, bottom: 20),
+                      top: 50, left: 8, right: 8),
                   child: Column(
                     children: [
                       const Text(
-                        "Leaderboard",
+                        "Data Pemakaian Listrik",
                         style: TextStyle(
                           fontSize: 24,
                           fontWeight: FontWeight.w500,
@@ -81,7 +81,7 @@ class LeaderboardScreen extends StatelessWidget {
                         Expanded(
                           flex: 1,
                           child: Text(
-                            "No",
+                            "Tgl",
                             style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.w600,

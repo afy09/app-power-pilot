@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:http/http.dart' as http;
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -144,16 +145,51 @@ class _LoginScreenState extends State<LoginScreen> {
                           const SizedBox(
                             height: 20,
                           ),
+                          // tombol login
                           SizedBox(
                             width: double.infinity,
                             height: 50,
                             child: ElevatedButton(
-                              onPressed: () {
-                                // if (_formKey.currentState!.validate()) {
-                                //   _formKey.currentState!.save();
-                                //   // Process data
-                                // }
-                                context.go('/');
+                              onPressed: () async {
+                                context.push('/');
+                                if (_formKey.currentState!.validate()) {
+                                  _formKey.currentState!.save();
+
+                                  // Kirim data masukan ke API
+                                  var url = Uri.parse('https://dsg54c1p-8000.asse.devtunnels.ms/api/login'); // Ganti dengan URL API Anda
+                                  var response = await http.post(
+                                    url,
+                                    body: {
+                                      'name': _username,
+                                      'password': _password,
+                                    },
+                                  );
+
+                                  if (response.statusCode == 200) {
+                                    // Jika login berhasil, lakukan sesuatu (misalnya, navigasi ke halaman selanjutnya)
+                                    // Jika menggunakan GoRouter, Anda bisa melakukan navigasi seperti ini:
+                                    context.go('/home');
+                                  } else {
+                                    // Jika login gagal, tampilkan pesan kesalahan
+                                    showDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog(
+                                          title: Text('Login Failed'),
+                                          content: Text('Invalid username or password. Please try again.'),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () {
+                                                Navigator.pop(context); // Tutup dialog
+                                              },
+                                              child: Text('OK'),
+                                            ),
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  }
+                                }
                               },
                               style: ElevatedButton.styleFrom(
                                 foregroundColor: Colors.white,

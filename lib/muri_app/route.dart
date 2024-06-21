@@ -17,6 +17,7 @@ import 'package:museum_polri/muri_app/view/reward.dart';
 import 'package:museum_polri/muri_app/view/reward_detail.dart';
 import 'package:museum_polri/muri_app/view/login.dart';
 import 'package:museum_polri/muri_app/view/export.dart';
+import 'package:museum_polri/muri_app/view/import.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
 final _bottomNavKey = GlobalKey<NavigatorState>();
@@ -156,6 +157,16 @@ class AppRouter {
             return MaterialPage(
               key: state.pageKey,
               child: const ExportScreen(),
+            );
+          },
+        ),
+        GoRoute(
+          path: '/import',
+          parentNavigatorKey: _rootNavigatorKey,
+          pageBuilder: (context, state) {
+            return MaterialPage(
+              key: state.pageKey,
+              child: const ImportScreen(),
             );
           },
         ),

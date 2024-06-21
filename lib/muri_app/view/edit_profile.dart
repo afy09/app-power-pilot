@@ -12,9 +12,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
   final TextEditingController _namaController =
       TextEditingController(text: 'Assyifa Sayyidina Ali');
   final TextEditingController _emailController =
-      TextEditingController(text: 'assyifasayyidinaali@gmail.com');
+      TextEditingController(text: 'Assyifaaali@gmail.com');
   final TextEditingController _telpController =
-      TextEditingController(text: '089531174163');
+      TextEditingController(text: '089531177777');
 
   @override
   Widget build(BuildContext context) {
@@ -38,15 +38,9 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                     style: TextStyle(fontSize: 18, color: Colors.black),
                   )),
             ),
-            ClipOval(
-              child: CachedNetworkImage(
-                imageUrl:
-                    'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT8wrKDFK4G59shtwPramnLVnQXs0fZ_XoAwMBuGmedbyhTZAko',
-                fit: BoxFit.cover,
-                width: 150,
-                height: 150,
-                placeholder: (context, url) => CircularProgressIndicator(),
-              ),
+            Image.asset(
+              'images/icon.png',
+              width: 70,
             ),
             TextButton(
                 onPressed: () {},

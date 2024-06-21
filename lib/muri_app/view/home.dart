@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fortune_wheel/flutter_fortune_wheel.dart';
 import 'package:go_router/go_router.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -243,9 +242,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               InkWell(
-                onTap: () {
-                  context.push('/login');
-                },
                 child: Container(
                   padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   decoration: BoxDecoration(
@@ -536,7 +532,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               InkWell(
                 onTap: () {
-                  context.push('/reward-detail');
+                  context.push('/import');
                 },
                 child: Container(
                   width: 170,
@@ -578,135 +574,9 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 20,
               ),
-
-              // const Text(
-              //   "Generator",
-              //   style: TextStyle(
-              //       fontSize: 24,
-              //       fontWeight: FontWeight.w600,
-              //       color: Color(0xFF34312F)),
-              // ),
-
-              // Row(
-              //   children: [
-              //
-              //     Expanded(
-              //       flex: 1,
-              //       child: InkWell(
-              //         onTap: () {
-              //           context.push('/caribarang_category');
-              //         },
-              //         child: Container(
-              //           height: 210,
-              //           decoration: BoxDecoration(
-              //             image: const DecorationImage(
-              //                 image: AssetImage("images/cari-barang.png"),
-              //                 fit: BoxFit.cover),
-              //             borderRadius: BorderRadius.circular(20),
-              //             boxShadow: [
-              //               BoxShadow(
-              //                 color: Colors.black.withOpacity(0.25),
-              //                 spreadRadius: 0,
-              //                 blurRadius: 4,
-              //                 offset: const Offset(0, 4),
-              //               ),
-              //             ],
-              //           ),
-              //           child: Stack(children: [
-              //             Positioned(
-              //                 top: 20,
-              //                 left: 20,
-              //                 child: Text(
-              //                   "Riwayat \nPemakaian",
-              //                   style: TextStyle(
-              //                       fontSize: 24,
-              //                       fontWeight: FontWeight.w600,
-              //                       color: Colors.white),
-              //                 )),
-              //           ]),
-              //         ),
-              //       ),
-              //     ),
-              //   ],
-              // )
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SpinWheelWidget extends StatefulWidget {
-  const SpinWheelWidget({super.key});
-
-  @override
-  State<SpinWheelWidget> createState() => _SpinWheelWidgetState();
-}
-
-class _SpinWheelWidgetState extends State<SpinWheelWidget> {
-  StreamController<int> selected = StreamController<int>();
-
-  @override
-  void dispose() {
-    selected.close();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final items = <int>[100, 200, 100, 300, 100, 100, 200, 100];
-
-    return Container(
-      width: MediaQuery.of(context).size.width * 0.9,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            height: MediaQuery.of(context).size.width * 0.9,
-            child: FortuneWheel(
-              animateFirst: false,
-              selected: selected.stream,
-              items: [
-                for (var i = 0; i < items.length; i++)
-                  FortuneItem(
-                    child: Text(
-                      '${items[i]} point',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                          color: Colors.black87),
-                    ),
-                    style: FortuneItemStyle(
-                      borderColor: Colors.orange[900]!,
-                      color: i % 2 == 0
-                          ? Colors.orange[400]!
-                          : Colors.orange[600]!,
-                    ),
-                  ),
-              ],
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              setState(() {
-                selected.add(
-                  Fortune.randomInt(0, items.length),
-                );
-              });
-            },
-            style: ElevatedButton.styleFrom(
-              foregroundColor: Colors.white,
-              backgroundColor:
-                  const Color(0xFF1594D7), // This is the background color
-              shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.circular(10), // This is the border radius
-              ),
-            ),
-            child: Text("Spin Sekarang"),
-          ),
-        ],
       ),
     );
   }
